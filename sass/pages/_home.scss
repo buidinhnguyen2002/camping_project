@@ -7,6 +7,7 @@
         position: absolute;
         top: -10rem;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 }
 .explore-section{
@@ -26,6 +27,8 @@
         background-color: $color-bg-orange;
         border-radius: 2rem;
         overflow: hidden;
+        position: relative;
+        overflow: hidden;
         .email__box{
             @include flexMiddle;
             flex-direction: column;
@@ -36,6 +39,8 @@
             background-image: url(../../assets/imgs/part-bg1.png);
             background-position: 10% 50%;
             background-size: cover;
+            position: relative;
+            z-index: 2;
             .email__input{
                 position: relative;
                 width: 100%;
@@ -68,6 +73,103 @@
                     @include dimension(4rem, 4rem);
                 }
             }
+        }
+        .camp-img{
+            position: relative;
+            z-index: 10;
+        }
+        .bg-device-small{
+            position: absolute;
+            display: none;
+            height: 90%;
+            object-fit: cover;
+            top: 30%;
+            left: -40%;
+            z-index: 1;
+        }
+    }
+}
+@media only screen and (max-width: 75em) {
+    .email__box{
+        padding-right: 2rem !important;
+    }
+}
+@media only screen and (max-width: 62.5em) {
+    .camping-info{
+        height: 70rem;
+    }
+    .explore-section{
+        .camping-card__box{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 2rem;
+            grid-row-gap: 2rem;
+        }
+    }
+    .email-section{
+        .email__wrapper{
+            flex-direction: column;
+            padding: 5rem 2.5rem;
+            border-radius: 3rem;
+            background-image: linear-gradient($color-bg-orange, $color-bg-orange),url(../../assets/imgs/part-bg-1.1.png);
+            background-size: 100%;
+            align-items: center;
+            .email__box{
+                order: 2;
+                padding: 0;
+                padding-top: 6rem;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                background-image: none;
+                .email__input{
+                    .input-email{
+                        padding: 4rem 4rem 4rem 7rem;
+                        width: 100%;
+                        border-radius: 2rem;
+                        outline: none;
+                        border: none;
+                        &:focus{
+                            box-shadow: 0 1px 3px $primary-color-orange;
+                        }
+                    }
+                    .img-email{ 
+                        left: 4.5rem;
+                    }
+                    .btn-send{
+                        right: 4.5rem;
+                        padding: 1rem;
+                        @include dimension(6.25rem, 6.25rem);
+                    }
+                }
+            }
+            .bg-device-small{
+                display: block;
+            }
+        }
+        .camp-img{
+            width: 50%;
+        }
+    }
+}
+@media only screen and (max-width: 37.5em) {
+    .camping-info{
+        position: relative;
+        width: 100%;
+        height: max-content;
+        height: 150rem;
+        .camping__cards{
+            top: -15rem;
+            flex-direction: column;
+        }
+    }
+    .camping-card__box{
+        grid-template-columns: 1fr !important;
+        grid-row-gap: 2rem !important;
+    }
+    .email-section{
+        .camp-img{
+            width: 100%;
         }
     }
 }

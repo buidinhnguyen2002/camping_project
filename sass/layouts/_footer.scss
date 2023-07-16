@@ -6,6 +6,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    h4{
+        font-size: 1.6rem;
+    }
     .footer__content{
         display: flex;
         justify-content: space-between;
@@ -34,4 +37,38 @@
             }
         }
     }
+    .download-app-wrapper{
+        align-self: flex-start;
+    }
+}
+@media only screen and (max-width: 37.5em) {
+    .footer{
+        h4{
+            font-size: 2.25rem !important;
+        }
+        .footer__content{
+            flex-direction: column;
+            &--left{
+                width: 100% !important;
+                .sub-content{
+                    font-size: 2rem;
+                }
+            }
+            &--right{
+                width: 100%;
+                flex-wrap: wrap;
+                .footer__col{
+                    width: 50%;
+                    margin-bottom: 3rem;
+                    &--item{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+        &__copyright{
+            font-size: 2rem;
+        }
+    }
+    
 }

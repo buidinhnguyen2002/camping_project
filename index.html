@@ -15,8 +15,8 @@
 <body>
     <section class="header">
         <div class="header__nav">
+            <div class="header__nav--icon"><img src="assets/imgs/t.png" alt=""></div>
             <div class="nav">
-                <div class="nav--icon"><img src="assets/imgs/t.png" alt=""></div>
                 <div class="nav__item-box">
                     <a href="#" class="nav__item nav__item--active">Home</a>
                     <a href="#" class="nav__item">Destination</a>
@@ -27,13 +27,14 @@
                     <a href="#" class="nav__item">About</a>
                     <a href="#" class="nav__item">Contact us</a>
                 </div>
-                <div class="nav-box">
-                    <img src="assets/imgs/nav.png" alt="">
+                <div class="button-group">
+                    <a href="#" class="button-group__button">Sign up</a>
+                    <a href="#" class="button-group__button button-group__button--border">Sign in</a>
                 </div>
             </div>
-            <div class="button-group">
-                <a href="#" class="button-group__button">Sign up</a>
-                <a href="#" class="button-group__button button-group__button--border">Sign in</a>
+            <div class="nav-box">
+                <!-- <img src="assets/imgs/nav.png" alt=""> -->
+                <img src="assets/imgs/nav.svg" alt="">
             </div>
         </div>
         <div class="header__hero hero-container">
@@ -44,31 +45,31 @@
             <a class="btn--discover" href="#">Discover</a>
         </div>
     </section>
-    <section class="camping-info ">
+    <section class="camping-info mb-8">
         <div class="camping__cards pd-content">
             <div class="camping__card camping__card--item">
-                <img class="camping__card--img mb-1" src="assets/imgs/bonfire-1.png" alt="">
+                <img class="camping__card--img mb-2" src="assets/imgs/bonfire-1.png" alt="">
                 <h4 class="camping__card--title heading-1--archivo mb-1">Camping & Day Use</h4>
                 <p class="camping__card--detail">Return to your favorite spot or discover a new one that’s right for
                     you.
                 </p>
             </div>
             <div class="camping__card camping__card--item">
-                <img class="camping__card--img mb-1" src="assets/imgs/Group 203.png" alt="">
+                <img class="camping__card--img mb-2" src="assets/imgs/Group 203.png" alt="">
                 <h4 class="camping__card--title heading-1--archivo mb-1">Camping & Day Use</h4>
                 <p class="camping__card--detail">Return to your favorite spot or discover a new one that’s right for
                     you.
                 </p>
             </div>
             <div class="camping__card camping__card--item">
-                <img class="camping__card--img mb-1" src="assets/imgs/filled outline-1.png" alt="">
+                <img class="camping__card--img mb-2" src="assets/imgs/filled outline-1.png" alt="">
                 <h4 class="camping__card--title heading-1--archivo mb-1">Camping & Day Use</h4>
                 <p class="camping__card--detail">Return to your favorite spot or discover a new one that’s right for
                     you.
                 </p>
             </div>
             <div class="camping__card camping__card--item">
-                <img class="camping__card--img mb-1" src="assets/imgs/fishing-1.png" alt="">
+                <img class="camping__card--img mb-2" src="assets/imgs/fishing-1.png" alt="">
                 <h4 class="camping__card--title heading-1--archivo mb-1">Camping & Day Use</h4>
                 <p class="camping__card--detail">Return to your favorite spot or discover a new one that’s right for
                     you.
@@ -267,22 +268,18 @@
                     </div>
                 </div>
             </div>
-            <img src="assets/imgs/camp.svg" alt="">
+            <img class="camp-img" src="assets/imgs/camp.svg" alt="">
+            <img class="bg-device-small" src="assets/imgs/part-bg-1.1.png" alt="">
         </div>
     </section>
     <footer class="footer pd-content">
-        <div class="footer__content mb-3">
+        <div class="footer__content">
             <div class="footer__content--left">
                 <h4 class="heading-1--archivo mb-1-5">Hipcamp is everywhere you want to camp.</h4>
                 <p class="sub-content mb-3">Discover unique experiences on ranches, nature preserves, farms, vineyards,
                     and
                     public campgrounds across the U.S. Book tent camping, treehouses, cabins, yurts, primitive
                     backcountry sites, car camping, airstreams, tiny houses, RV camping, glamping tents and more.</p>
-                <h4 class="heading-1--archivo mb-1-5">Download Our App</h4>
-                <div class="dowload-app">
-                    <a href="#"><img src="assets/imgs/ios.svg" alt=""></a>
-                    <a href="#"><img src="assets/imgs/android.svg" alt=""></a>
-                </div>
             </div>
             <div class="footer__content--right">
                 <div class="footer__col">
@@ -309,6 +306,13 @@
                     <a href="#" class="footer__col--item">Media Center</a>
                     <a href="#" class="footer__col--item">Site Map</a>
                 </div>
+            </div>
+        </div>
+        <div class="download-app-wrapper mb-3">
+            <h4 class="heading-1--archivo mb-1-5">Download Our App</h4>
+            <div class="dowload-app">
+                <a href="#"><img src="assets/imgs/ios.svg" alt=""></a>
+                <a href="#"><img src="assets/imgs/android.svg" alt=""></a>
             </div>
         </div>
         <p class="footer__copyright mb-4">© 2020. All rights reserved.</p>

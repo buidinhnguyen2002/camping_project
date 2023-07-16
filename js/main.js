@@ -8,3 +8,15 @@ travelFavorites.forEach(element => {
         });
       });
 });
+
+function calBgPositionX(parentWidth) {
+    return ((720 - parentWidth) / 720 * 100)+ 10 + "%" ;
+  }
+
+function updateBgPositionX() {
+    const element = document.querySelector('.email__box');
+    const bgPositionX = calBgPositionX(element.offsetWidth);
+    element.style.backgroundPositionX = bgPositionX;
+}
+window.addEventListener('resize', updateBgPositionX);
+updateBgPositionX();

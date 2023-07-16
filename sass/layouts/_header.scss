@@ -12,19 +12,20 @@
     border-bottom-right-radius: 15rem;
     &__nav{
         display: flex;
-        justify-content: space-between;
-        .nav{
-            display: flex;
-            align-items: center;
-            &--icon{
-                @include dimension(4rem, 4rem);
+        &--icon{
+            @include dimension(4rem, 4rem);
                 margin-right: 4rem;
                 img{
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                 }
-            }
+        }
+        .nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-grow: 1;
             &__item{
                 margin-right: 3rem;
                 color: $color-grey-01;
@@ -45,6 +46,18 @@
                         left: 50%;
                         transform: translate(-50%, -150%) rotateZ(45deg);
                     }
+                }
+            }
+            &-box{
+                display: none;
+                padding: 0.5rem 0.2rem;
+                background-color: $primary-color-light;
+                @include flexMiddle;
+                @include dimension(6rem, 6rem);
+                border-radius: 40%;
+                img{
+                    @include dimension(100%, 100%);
+                    object-fit: cover;
                 }
             }
         }
@@ -93,19 +106,38 @@
     .nav--icon{
         margin-right: 2rem;
     }
+    .nav__item-box{
+        max-width: 70%;
+    }
 }
 @media only screen and (max-width: 37.5em) {
     .header {
         padding: 2rem 2rem;
+        height: 100vh;
     }
     .hero-container{
         max-width: 80%;
     }
-    .nav--icon{
-        width: 5rem !important;
-        height: 5rem !important;
+    .header__nav{
+        justify-content: space-between;
     }
-    .nav__item-box{
-        display: none;
+    .header__nav--icon{
+        width: 6rem !important;
+        height: 6rem !important;
+    }
+    .nav{
+        display: none !important;
+    }
+    .nav-box{
+        display: flex !important;
+    }
+    .sub-content{
+        font-size: 2.3rem;
+    }
+    .header__hero{
+        width: 100%;
+    }
+    .hero-container {
+        max-width: 100%;
     }
 }

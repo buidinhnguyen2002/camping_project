@@ -23,3 +23,15 @@
     padding-left: 12rem;
     padding-right: 12rem;
 }
+@media only screen and (max-width: 37.5em) {
+    .pd-content{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+@media only screen and (max-width: 62.5em) {
+    .pd-content{
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}
