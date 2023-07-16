@@ -1,0 +1,111 @@
+.header {
+    padding: 4rem 12rem;
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(59, 55, 53, 0.5),rgba(59, 55, 53, 0.5)),url(../../assets/imgs/hero4x.png);
+    background-repeat: no-repeat;
+    background-position-y: 75%;
+    background-size: cover;
+    border-bottom-left-radius: 15rem;
+    border-bottom-right-radius: 15rem;
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        .nav{
+            display: flex;
+            align-items: center;
+            &--icon{
+                @include dimension(4rem, 4rem);
+                margin-right: 4rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &__item{
+                margin-right: 3rem;
+                color: $color-grey-01;
+                font-size: 1.6rem;
+                line-height: 1.55;
+                text-decoration: none;
+                &--active{
+                    position: relative;
+                    color: $primary-color-light;
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 80%;
+                        height: 2px;
+                        background-color: $primary-color-orange;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -150%) rotateZ(45deg);
+                    }
+                }
+            }
+        }
+    }
+    &__hero{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: $primary-color-light;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .hero-container{
+        padding: 3rem;
+        margin: 0 auto;
+        h1{
+            font-size: 6rem;
+
+        }
+    }
+    .sub-content{
+        line-height: 1.55;
+    }
+}
+@media (min-width: 1200px) {
+    .header {
+        padding: 4rem 12rem;
+    }
+    .hero-container{
+        max-width: 40%;
+    }
+}
+@media only screen and (max-width: 75em) {
+    .header {
+        padding: 4rem 4rem;
+    }
+    .hero-container{
+        max-width: 40%;
+    }
+    .nav__item{
+        margin-right: 2rem;
+    }
+    .nav--icon{
+        margin-right: 2rem;
+    }
+}
+@media only screen and (max-width: 37.5em) {
+    .header {
+        padding: 2rem 2rem;
+    }
+    .hero-container{
+        max-width: 80%;
+    }
+    .nav--icon{
+        width: 5rem !important;
+        height: 5rem !important;
+    }
+    .nav__item-box{
+        display: none;
+    }
+}

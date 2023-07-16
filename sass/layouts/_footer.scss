@@ -1,0 +1,37 @@
+.footer{
+    border-top-left-radius: 12rem;
+    border-top-right-radius: 12rem;
+    background-color: $color-bg-orange;
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .footer__content{
+        display: flex;
+        justify-content: space-between;
+        &--left{
+            width: 45%;
+            padding-right: 2rem;
+            h4{
+                font-size: 1.6rem;
+            }
+        }
+        &--right{
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            .footer__col{
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                &--item{
+                    text-decoration: none;
+                    color: $primary-color-dark
+                }
+                h4{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}

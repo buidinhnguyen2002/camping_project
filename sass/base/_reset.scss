@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.4rem;
+    line-height: 1.75;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    background-color: $primary-color-bg;
+    color: $primary-color-dark;
+}
+@media only screen and (max-width: 75em){
+    html{
+        font-size: 57%;
+    }
+}
+@media only screen and (max-width: 62.5em){
+    html{
+        font-size: 50%;
+    }
+}
+@media only screen and (max-width: 37.5em){
+    html{
+        font-size: 50%;
+    }
+}

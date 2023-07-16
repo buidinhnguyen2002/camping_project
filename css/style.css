@@ -1,0 +1,473 @@
+@coloL : #3B3735;
+.d_flex, .email-section .email__wrapper .email__box .email__input .btn-send, .email-section .email__wrapper .email__box, .explore-section, .camping-card--travel .camping-card__review .camping-card__favorite {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-1-5 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.mb-6 {
+  margin-bottom: 6rem;
+}
+
+.mb-8 {
+  margin-bottom: 8rem;
+}
+
+.pd-content {
+  padding-left: 12rem;
+  padding-right: 12rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  line-height: 1.75;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  background-color: #FAF4F2;
+  color: #3B3735;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 57%;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+.heading-1--archivo {
+  font-size: 3rem;
+  font-family: "Archivo Black", sans-serif;
+  line-height: 1.35;
+}
+
+.header {
+  padding: 4rem 12rem;
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(59, 55, 53, 0.5), rgba(59, 55, 53, 0.5)), url(../../assets/imgs/hero4x.png);
+  background-repeat: no-repeat;
+  background-position-y: 75%;
+  background-size: cover;
+  border-bottom-left-radius: 15rem;
+  border-bottom-right-radius: 15rem;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+.header__nav .nav {
+  display: flex;
+  align-items: center;
+}
+.header__nav .nav--icon {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 4rem;
+}
+.header__nav .nav--icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header__nav .nav__item {
+  margin-right: 3rem;
+  color: #D2D2D2;
+  font-size: 1.6rem;
+  line-height: 1.55;
+  text-decoration: none;
+}
+.header__nav .nav__item--active {
+  position: relative;
+  color: white;
+}
+.header__nav .nav__item--active::before {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background-color: #FF8A6C;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%) rotateZ(45deg);
+}
+.header__hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header .hero-container {
+  padding: 3rem;
+  margin: 0 auto;
+}
+.header .hero-container h1 {
+  font-size: 6rem;
+}
+.header .sub-content {
+  line-height: 1.55;
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding: 4rem 12rem;
+  }
+  .hero-container {
+    max-width: 40%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .header {
+    padding: 4rem 4rem;
+  }
+  .hero-container {
+    max-width: 40%;
+  }
+  .nav__item {
+    margin-right: 2rem;
+  }
+  .nav--icon {
+    margin-right: 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header {
+    padding: 2rem 2rem;
+  }
+  .hero-container {
+    max-width: 80%;
+  }
+  .nav--icon {
+    width: 5rem !important;
+    height: 5rem !important;
+  }
+  .nav__item-box {
+    display: none;
+  }
+}
+.footer {
+  border-top-left-radius: 12rem;
+  border-top-right-radius: 12rem;
+  background-color: #F8E1DB;
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .footer__content {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer__content--left {
+  width: 45%;
+  padding-right: 2rem;
+}
+.footer .footer__content--left h4 {
+  font-size: 1.6rem;
+}
+.footer .footer__content--right {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer__content--right .footer__col {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer__content--right .footer__col--item {
+  text-decoration: none;
+  color: #3B3735;
+}
+.footer .footer__content--right .footer__col h4 {
+  font-size: 1.6rem;
+}
+
+.button-group {
+  display: flex;
+}
+.button-group__button {
+  color: white;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.button-group__button--border {
+  border-radius: 2.5rem;
+  border: 1px solid white;
+}
+
+.btn--discover {
+  padding: 0.7rem 4rem;
+  border-radius: 2rem;
+  background-color: #E76F51;
+  text-decoration: none;
+  color: white;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.btn__readmore {
+  text-decoration: none;
+  padding: 1rem 4.5rem;
+  background-color: #F3F3F3;
+  border-radius: 2.5rem;
+  color: #8D8D8D;
+  display: inline-block;
+}
+
+.btn-view-all {
+  padding: 0.5rem 4.5rem;
+  border: 1px solid #FF8A6C;
+  border-radius: 2.5rem;
+  color: #FF8A6C;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.camping__card {
+  width: 23.7%;
+  padding: 5rem 2.5rem 4rem;
+  background-color: white;
+}
+.camping__card--item {
+  text-align: center;
+  border-radius: 2rem;
+}
+.camping__card--img {
+  width: 6rem;
+  height: 6rem;
+}
+.camping__card--title {
+  font-size: 1.6rem;
+}
+.camping__card--detail {
+  font-size: 1.4rem;
+}
+
+.camping-card--travel {
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+}
+.camping-card--travel .camping-card__review {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  line-height: 1;
+}
+.camping-card--travel .camping-card__review .img-review {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+.camping-card--travel .camping-card__review .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(59, 55, 53, 0.2);
+}
+.camping-card--travel .camping-card__review .camping-card__favorite {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: white;
+  width: 3rem;
+  height: 3rem;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.camping-card--travel .camping-card__review .camping-card__favorite .favorite--hidden {
+  display: none;
+}
+.camping-card--travel .camping-card__review .camping-card__favorite .favorite--active {
+  display: block;
+}
+.camping-card--travel .camping-card__review .camping-card__favorite img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.camping-card--travel .camping-card__review .camping-card__price {
+  border-radius: 1.5rem;
+  color: #FF8A6C;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  padding: 1rem 3rem;
+  background-color: white;
+}
+.camping-card--travel .camping-card__title {
+  font-size: 1.6rem;
+}
+.camping-card--travel .camping-card__detail {
+  font-size: 1.4rem;
+}
+
+.camping-info {
+  position: relative;
+  width: 100%;
+  height: 30rem;
+}
+.camping-info .camping__cards {
+  display: flex;
+  position: absolute;
+  top: -10rem;
+  justify-content: space-between;
+}
+
+.explore-section {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.explore-section .camping-card__box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+
+.email-section .email__wrapper {
+  display: flex;
+  background-color: #F8E1DB;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.email-section .email__wrapper .email__box {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 8rem;
+  padding-right: 15rem;
+  align-items: flex-start;
+  width: 60%;
+  background-image: url(../../assets/imgs/part-bg1.png);
+  background-position: 10% 50%;
+  background-size: cover;
+}
+.email-section .email__wrapper .email__box .email__input {
+  position: relative;
+  width: 100%;
+}
+.email-section .email__wrapper .email__box .email__input .input-email {
+  padding: 2.5rem 2.5rem 2.5rem 5rem;
+  background-color: white;
+  width: 100%;
+  border-radius: 1.5rem;
+  outline: none;
+  border: none;
+}
+.email-section .email__wrapper .email__box .email__input .input-email:focus {
+  box-shadow: 0 1px 3px #FF8A6C;
+}
+.email-section .email__wrapper .email__box .email__input .img-email {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translate(-50%, -50%);
+}
+.email-section .email__wrapper .email__box .email__input .btn-send {
+  position: absolute;
+  top: 50%;
+  right: 3rem;
+  transform: translate(50%, -50%);
+  background-color: #E76F51;
+  padding: 0.5rem;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-radius: 40%;
+  width: 4rem;
+  height: 4rem;
+}
+
+/*# sourceMappingURL=style.css.map */
