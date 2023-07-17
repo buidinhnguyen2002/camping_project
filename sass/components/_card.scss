@@ -1,10 +1,14 @@
 .camping__card{
     width: 23.7%;
-    padding: 5rem 2.5rem 4rem;
+    padding: 5rem 2.3rem 4rem;
     background-color: $primary-color-light;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
     &--item{
         text-align: center;
         border-radius: 2rem;
+        height: max-content;
     }
     &--img{
         @include dimension(6rem, 6rem);
@@ -14,6 +18,15 @@
     }
     &--detail{
         font-size: 1.4rem;
+    }
+    &--extend{
+        display: none;
+    }
+    &:hover{
+        border-color: #8080ff;
+        .camping__card--extend {
+            display: inline-block;
+        }
     }
 }
 .camping-card--travel{

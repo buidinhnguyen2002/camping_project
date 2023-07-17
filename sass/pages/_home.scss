@@ -4,7 +4,7 @@
     height: 30rem;
     .camping__cards{
         display: flex;
-        position: absolute;
+        position: relative;
         top: -10rem;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -19,6 +19,38 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-column-gap: 2rem;
         grid-row-gap: 2rem;
+    }
+    .travel-review{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 0;
+        transition: 0.3s all linear;
+        overflow: hidden;
+        &__img{
+            width: 49%;
+            border-radius: 3rem;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+            transition: all 0.4s linear 0.3s;
+            opacity: 0;
+            object-fit: cover;
+            &--left{
+                transform: translateX(-100%);
+            }
+            &--right{
+                transform: translateX(100%);
+            }
+            &--translate{
+                transform: translate(0);
+                opacity: 1;
+            }
+        }
+        &--expanded{
+            height: 400px;
+        }
+    }
+    .explor-img{
+        cursor: pointer;
     }
 }
 .email-section{
@@ -151,6 +183,11 @@
             width: 50%;
         }
     }
+    .travel-review{
+        &--expanded{
+            height: 300px !important;
+        }
+    }
 }
 @media only screen and (max-width: 37.5em) {
     .camping-info{
@@ -170,6 +207,15 @@
     .email-section{
         .camp-img{
             width: 100%;
+        }
+    }
+    .travel-review{
+        &__img{
+            width: 100% !important;
+            margin-bottom: 2rem;
+        }
+        &--expanded{
+            height: 600px !important;
         }
     }
 }

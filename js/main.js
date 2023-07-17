@@ -20,3 +20,18 @@ function updateBgPositionX() {
 }
 window.addEventListener('resize', updateBgPositionX);
 updateBgPositionX();
+
+const exploreIcon = document.querySelector('.explor-img');
+const travelReview = document.querySelector('.travel-review');
+exploreIcon.addEventListener('mouseover', function (e) {
+    travelReview.classList.add("travel-review--expanded");  
+    Array.from(travelReview.children).forEach(imgReview => {
+        imgReview.classList.add('travel-review__img--translate');
+    });
+});
+exploreIcon.addEventListener('mouseout', function (e) {
+    travelReview.classList.remove("travel-review--expanded");
+    Array.from(travelReview.children).forEach(imgReview => {
+        imgReview.classList.remove('travel-review__img--translate');
+    });
+});

@@ -32,19 +32,43 @@
                 font-size: 1.6rem;
                 line-height: 1.55;
                 text-decoration: none;
+                position: relative;
+                transition: 0.3s all;
+                &::before{
+                    content: '';
+                    transition: 0.3s all;
+                    display: block;
+                    width: 3.5rem;
+                    height: 2px;
+                    background-color: $primary-color-orange;
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    left: 25%;
+                    transform: translate(-50%, -10px) rotateZ(45deg);
+                }
+                &:hover{
+                    color: $primary-color-light;
+                    &::before{
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -150%) rotateZ(45deg);
+                        opacity: 1;
+                    }
+                }
                 &--active{
-                    position: relative;
                     color: $primary-color-light;
                     &::before{
                         content: '';
                         display: block;
-                        width: 80%;
+                        width: 3.5rem;
                         height: 2px;
                         background-color: $primary-color-orange;
                         position: absolute;
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -150%) rotateZ(45deg);
+                        opacity: 1;
                     }
                 }
             }
