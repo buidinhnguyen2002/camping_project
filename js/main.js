@@ -35,3 +35,9 @@ exploreIcon.addEventListener('mouseout', function (e) {
         imgReview.classList.remove('travel-review__img--translate');
     });
 });
+
+const nav = document.querySelector('.nav');
+const navBox = document.querySelector('.nav-box');
+navBox.addEventListener('click', function(){
+    nav.classList.toggle('nav--translate');
+});

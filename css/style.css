@@ -125,28 +125,27 @@ body {
   line-height: 1.55;
   text-decoration: none;
   position: relative;
-  transition: 0.3s all;
+  transition: 0.3s all linear;
 }
 .header__nav .nav__item::before {
   content: "";
   transition: 0.3s all;
   display: block;
-  width: 3.5rem;
+  width: 0;
   height: 2px;
   background-color: #FF8A6C;
   position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 25%;
-  transform: translate(-50%, -10px) rotateZ(45deg);
+  opacity: 1;
+  top: -30%;
+  left: 30%;
+  transform-origin: 0;
+  transform: rotate(45deg);
 }
 .header__nav .nav__item:hover {
   color: white;
 }
 .header__nav .nav__item:hover::before {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -150%) rotateZ(45deg);
+  width: 3.5rem;
   opacity: 1;
 }
 .header__nav .nav__item--active {
@@ -161,6 +160,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform-origin: center;
   transform: translate(-50%, -150%) rotateZ(45deg);
   opacity: 1;
 }
@@ -250,7 +250,36 @@ body {
     height: 6rem !important;
   }
   .nav {
-    display: none !important;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    background-color: #E76F51;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    padding: 2rem;
+    transform: translateX(100%);
+    flex-direction: column;
+    width: 250px;
+    z-index: 10;
+    transition: 0.5s all;
+  }
+  .nav__item-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid white;
+  }
+  .nav__item {
+    margin-right: 0 !important;
+    margin-bottom: 0.5rem;
+    color: white !important;
+  }
+  .nav .button-group {
+    flex-direction: column;
+  }
+  .nav--translate {
+    transform: translateX(0);
   }
   .nav-box {
     display: flex !important;
@@ -369,6 +398,12 @@ body {
   color: white;
   width: max-content;
   margin: 0 auto;
+  border: 1px solid #E76F51;
+  transition: all 0.3s;
+}
+.btn--discover:hover {
+  border-color: white;
+  background-color: transparent;
 }
 
 .btn__readmore {
@@ -431,13 +466,17 @@ body {
   font-size: 1.4rem;
 }
 .camping__card--extend {
-  display: none;
+  display: inline-block;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.3s all linear;
 }
 .camping__card:hover {
   border-color: #8080ff;
 }
 .camping__card:hover .camping__card--extend {
-  display: inline-block;
+  height: 150px;
+  max-width: max-content;
 }
 
 .camping-card--travel {

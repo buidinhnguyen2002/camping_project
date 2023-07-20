@@ -20,12 +20,17 @@
         font-size: 1.4rem;
     }
     &--extend{
-        display: none;
+        display: inline-block;
+        height: 0px;
+        overflow: hidden;
+        transition: 0.3s all linear;
+        // display: none;
     }
     &:hover{
         border-color: #8080ff;
         .camping__card--extend {
-            display: inline-block;
+            height: 150px;
+            max-width: max-content;
         }
     }
 }

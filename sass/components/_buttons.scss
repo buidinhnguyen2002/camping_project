@@ -29,6 +29,12 @@
     color: $primary-color-light;
     width: max-content;
     margin: 0 auto;
+    border: 1px solid $secondary-color-orange;
+    transition: all 0.3s;
+    &:hover{
+        border-color: $primary-color-light;
+        background-color: transparent;
+    }
 }
 .btn__readmore{
     text-decoration: none;
